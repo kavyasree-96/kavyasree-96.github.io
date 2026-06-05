@@ -1,6 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  body {
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  /* Background Shapes */
+  .bg-shape {
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.12;
+  }
+  
+  .shape-circle {
+    width: 260px;
+    height: 260px;
+    border: 1px solid rgba(69,24,62,0.3);
+    border-radius: 50%;
+    top: 12%;
+    right: -80px;
+  }
+  
+  .shape-square {
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(69,24,62,0.25);
+    transform: rotate(25deg);
+    bottom: 20%;
+    left: -90px;
+  }
+  
+  .shape-grid {
+    width: 220px;
+    height: 220px;
+    background-image:
+      linear-gradient(rgba(69,24,62,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(69,24,62,0.08) 1px, transparent 1px);
+    background-size: 20px 20px;
+    top: 55%;
+    right: -60px;
+  }
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Kavyasree Natarajan — Designer & Developer</title>
@@ -48,6 +89,7 @@
   .hero {
     min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
     padding: 7rem 2rem 4rem; max-width: var(--max); margin: 0 auto;
+    
   }
   .hero-eyebrow { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; font-weight: 400; }
   .hero h1 { font-family: var(--serif); font-size: clamp(2.8rem, 8vw, 5.2rem); line-height: 1.06; letter-spacing: -0.02em; margin-bottom: 1.5rem; font-weight: 400; }
@@ -161,7 +203,9 @@
 </style>
 </head>
 <body>
-
+  <div class="bg-shape shape-circle"></div>
+  <div class="bg-shape shape-square"></div>
+  <div class="bg-shape shape-grid"></div>
 <nav>
   <div class="nav-name">Kavyasree Natarajan</div>
   <div class="nav-links">
@@ -275,7 +319,7 @@
   <h2>Download my resume</h2>
   <div class="resume-area fade-in">
     <div class="resume-btns">
-      <a href="Resume_Analytics.pdf" download class="btn btn-outline"> Download Resume </a>
+      <a href="KavyasreeNatarajan_Resume.pdf" download class="btn btn-outline"> Download Resume </a>
     </div>
     <div class="resume-preview">
       <div class="resume-line"><span>Education</span><span>BCA · Mount Carmel College Autonomous · 7.72 CGPA · 2023–2026</span></div>
